@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+</head>
+<body>
+    <h1>Lista de Noticias</h1>
+    <ul>
+        {% for item in news %}
+            <li>
+                <a href="{{ item.id }}/"><strong>{{ item.title }}</strong></a> - {{ item.author }} - {{ item.created_at }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
